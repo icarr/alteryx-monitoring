@@ -6,8 +6,8 @@ Included are two examples of logatash filters for parsing gallery and service lo
 
 ## Queue monitoring
 	
-An example of how you can monitor how many jobs are in the Alteryx Service queue.  The included example also shows how these metrics can be sent to AWS CloudWatch for alerting.
+A python example of how you can monitor the number of jobs in the Alteryx Service queue.  The included example also shows how these metrics can be sent to AWS CloudWatch for alerting.
 
 ## Service monitoring
 
-An example of a health check monitor for Alteryx Service node.  This example allow you to specify which nodes to monitor and what the expected result should contain.  Sqllite is used as a simple way to persist state between polling intervals to enable alerting of an UP or DOWN status.
+A python example of a health check monitor for Alteryx Service nodes.  This example allows you to specify which nodes to monitor and what the expected result should contain.  Sqlite is used as a simple way to persist state between polling intervals which can be used to enable alerting of an UP or DOWN status.
