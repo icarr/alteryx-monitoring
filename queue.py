@@ -4,10 +4,10 @@ import os
 from globals import *
 from pymongo import MongoClient
 
-DB_SERVER = 'x.x.x.x'
+DB_SERVER = ''
 DB_PORT   = 27017
-DB_USER   = 'user'
-DB_PWD    = 'password'
+DB_USER   = ''
+DB_PWD    = ''
 
 
 def _main():
@@ -24,7 +24,8 @@ def get_count():
         queue_collection = db.AS_Queue
         count = queue_collection.find({"Status": "Queued"}).count()
         client.close()
-    except:
+    except Exception, e:
+        print str(e)
         count = 999
     finally:
         return count
